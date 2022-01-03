@@ -1,0 +1,100 @@
+ 
+.bannerImg{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+   /* max-width: 1412px; */
+   /* text-align: center; */
+   
+} 
+
+.rioLogo{
+   position: absolute;
+   display: flex;
+   top: 3%;
+   right: 3%;
+    width: 12%;
+   height: 16%;
+   background-color: rgb(255, 255, 255); 
+}
+
+.rioImg{
+   position: relative;
+   display: flex;
+   justify-content: flex-end;
+   left: 22%;
+   width: 80%;
+   
+
+
+}
+.menu{
+   position: absolute;
+   list-style: none;
+   padding: 0%;
+   background-color: black;
+   width: 87%;
+   height: 10%;
+   top: 3.5%;
+   left: 2%;
+   
+   font-family: 'Righteous';
+   font-size: 150%;
+   
+}
+
+.menu li a{
+   text-decoration: none;
+   color:#ffffff ;
+   padding: 20px;
+   display: block;
+   padding-top: 15%;
+}
+
+.menu li{
+   display: inline-block;
+   text-align: center;
+}
+
+
+.firstParagraph{
+   position: absolute;
+   font-family: 'Righteous';
+   font-size: 190%;
+   text-align: left;
+   left: 3%;
+   top: 25%;
+}
+
+.athletesImg{
+   position: absolute;
+   width: 28%;
+   top: 37%;
+   right: 0%;
+}
+
+.logoImg{
+   position: absolute;
+   width: 7%;
+   top: 80%;
+   left: 2%;
+}
+
+.line{
+   position: absolute;
+   top:90%;
+   right: 0%;
+}
+.eventDates{
+   position: absolute;
+   top:91%;
+   left: 2%;
+   font-family: 'Righteous';
+   font-size: 70%;
+}
+
+.hola{
+   position: absolute;
+   top:500%;
+}
