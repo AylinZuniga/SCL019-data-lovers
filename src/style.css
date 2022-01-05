@@ -1,47 +1,50 @@
- 
+*{
+margin: 0 auto;
+padding: 0%;
+
+}
+
+ .navbar{
+    display: flex;
+    flex-direction: row;
+    background-image: url(imagenes/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1%;
+ }
+
+
 .bannerImg{
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    width: 100%;
-   /* max-width: 1412px; */
-   /* text-align: center; */
-   
+    width: 105%;
+    margin: 0px;
+    padding: 0px; 
+    margin-right: 0px;  
+    z-index: 2;
 } 
 
 .rioLogo{
-   position: absolute;
-   display: flex;
-   top: 3%;
-   right: 3%;
-    width: 12%;
-   height: 16%;
+   margin-right: 3%;
+   width: 8vw;
    background-color: rgb(255, 255, 255); 
 }
 
 .rioImg{
-   position: relative;
-   display: flex;
-   justify-content: flex-end;
-   left: 22%;
-   width: 80%;
    
-
-
+   width: 100%;
+  
 }
+
 .menu{
-   position: absolute;
-   list-style: none;
    padding: 0%;
    background-color: black;
-   width: 87%;
-   height: 10%;
-   top: 3.5%;
+   width: 90%;
+   height: 2%;
    left: 2%;
-   
    font-family: 'Righteous';
-   font-size: 150%;
-   
+   font-size: 2vw;;
+   margin-top: 3vh;
+   margin-left: 2vh;
 }
 
 .menu li a{
@@ -58,43 +61,83 @@
 }
 
 
-.firstParagraph{
-   position: absolute;
+.parrafoPrincipal{
+   width: 100vw;
+   display: flex;
+   margin-right: 2vw;
+   padding: 2% 0% 0%;
+ }
+
+ .positionParagraph{
+   margin-left: 4%;
+ }
+
+ .firstParagraph{
    font-family: 'Righteous';
-   font-size: 190%;
-   text-align: left;
-   left: 3%;
-   top: 25%;
+   font-size: 2vw;    
+ }
+ .firtImg{
+   margin-right: -0.7%;
+   padding-top: 5%;
+ }
+ .athletesImg{
+   width: 28vw;  
+}
+.logoPosition{
+   padding-top: 26%;
+   padding-left: 4%;
+}
+ .logoImg{
+   width: 9%;
+ }
+
+
+.secondElement{
+   display: flex;
+   flex-direction: column;
+   /* background-color: bisque; */
+   padding-left: 1.8%;
+   justify-content: flex-start;
 }
 
-.athletesImg{
-   position: absolute;
-   width: 28%;
-   top: 37%;
-   right: 0%;
+ .linePosition{
+    padding-bottom: 2%;
+   
+ }
+ .lineStyle{
+   height: 0.8vh;
+   background-color:  black;
+   width: 98vw;
+   border: none;
+ }
+ .eventDatePosition{
+    
+   margin-left: -0.1%;
+  padding-bottom: 1%;
+
+   
+
 }
 
-.logoImg{
-   position: absolute;
-   width: 7%;
-   top: 80%;
-   left: 2%;
+ .eventDates{
+   font-family:'Righteous';
+   font-size: 1vw;
+   
 }
 
-.line{
-   position: absolute;
-   top:90%;
-   right: 0%;
-}
-.eventDates{
-   position: absolute;
-   top:91%;
-   left: 2%;
-   font-family: 'Righteous';
-   font-size: 70%;
+
+
+
+
+.sport{
+
+   width: 150px;
+   height: 50px;
+   background: #EB6062;
+
 }
 
 .hola{
-   position: absolute;
+   
    top:500%;
 }
