@@ -122,6 +122,7 @@ padding: 0%;
   
 }
 
+<<<<<<< HEAD
 .selectorGroup{
    display: flex;
    flex-direction: column;
@@ -133,6 +134,8 @@ padding: 0%;
 
 
 
+=======
+>>>>>>> 9131d30a0e1fa00b527574a1b09058ac9487d4e3
 .sport{
 
    width: 150px;
@@ -145,3 +148,49 @@ padding: 0%;
    
    top:500%;
 }
+
+.iniciarFiltrado {
+   display: flex;
+   flex-direction: column;
+   padding-left: 1.8%;
+   justify-content: left;
+}
+
+.invitationPosition{
+   margin-left: -0.1%;
+   padding-bottom: 1%; 
+}
+
+.filtrarAhora{
+   font-family:'Righteous';
+   font-size: 1.5vw;
+}
+
+.inputSearch{
+   margin-left: -0.1%;
+   padding-bottom: 1%; 
+}
+
+#search{
+   font-family:'Righteous';
+   font-size: 1vw;
+}
+
+
+
+
+/* .subNav {
+   margin-top: 2.2rem;
+   display: flex;
+   justify-content: space-evenly;
+   
+  }
+    
+  
+    .search-box {
+      background-color: var(--color-background-nav);
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+    }
+     */
