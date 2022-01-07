@@ -122,6 +122,8 @@ padding: 0%;
   
 }
 
+/*fin area bienvenida*/
+
 .selectorGroup{
    display: flex;
    flex-direction: column;
@@ -141,10 +143,6 @@ padding: 0%;
 
 }
 
-.hola{
-   
-   top:500%;
-}
 
 .iniciarFiltrado {
    display: flex;
@@ -172,22 +170,30 @@ padding: 0%;
    font-family:'Righteous';
    font-size: 1vw;
 }
+/*filtros*/
 
-
-
-
-/* .subNav {
-   margin-top: 2.2rem;
-   display: flex;
-   justify-content: space-evenly;
-   
-  }
-    
+.containerAthletes{
+  width: 70%;
+  height: 100vh;
+  margin-top: 5rem;
+  border: hidden;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* position: relative; */
+  /* gap: 5px; */
+  padding-left: 7%;
   
-    .search-box {
-      background-color: var(--color-background-nav);
-      display: flex;
-      align-items: center;
-      border-radius: 4px;
-    }
-     */
+  
+}
+
+.card{
+   background-color: rgba(179, 79, 79, 0.26);
+   width: 17vw;
+   height: 30vh;
+   border: 2px solid #4CAF50;
+   /* padding: 15px 11px; */
+   border-radius: 15px;
+   text-align: center;
+   
+}

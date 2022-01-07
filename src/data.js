@@ -1,4 +1,4 @@
-// estas funciones son de ejemplo
+// funcion de filtrado 
 
 export const example = () => {
   return 'example';
