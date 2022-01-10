@@ -248,10 +248,20 @@ padding: 0%;
    background-color: rgb(238, 66, 66);
    text-align: center;
    color: rgb(223, 219, 219);
-   margin-top: 1rem;
-   padding: 1rem;
+ 
+   /* padding-top: 1%; */
    font-family:'Righteous';
    font-size: 1vw;
+   display: flex;
+   padding-top: 30px;
+   padding-right: 0px;
+   padding-left: 15px;
+}
+
+.antorchaImg{
+   width: 3vw;
+   margin-left: -1%;
+
 }
 
 
