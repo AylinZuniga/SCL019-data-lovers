@@ -124,7 +124,7 @@ padding: 0%;
 
 /*fin area bienvenida*/
 
-.selectorGroup{
+.filterGroup{
    display: flex;
    flex-direction: column;
    padding-right: 10%;
@@ -172,17 +172,67 @@ padding: 0%;
 }
 /*filtros*/
 
+.optionFiler {
+   border-radius: 4px;
+   background-color: var(--color-background-nav);
+   color: var(--color-size);
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+   /* cursor: pointer; */
+   padding: 20px;
+   /* position: relative; */
+ }
+ 
+ .optionFiler .fa-chevron-down {
+   margin-left: 10px;
+ }
+ 
+ .optionFiler ul {
+   border-radius: 4px;
+   background-color: #EB6062;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+   /* display: none; */
+   padding: 0px;
+   /* position: absolute; */
+   top: 80%;
+   left: 0;
+   list-style-type: none;
+   width: 100%;
+ }
+ 
+ .optionFiler.open ul {
+   /* display: block; */
+ }
+ 
+ .optionFiler ul li {
+   margin: 5px 0;
+   padding-left: 20px;
+ }
+
+
+
+
+
+
+/*fin clase filtros*/
+
+.positionContainer{
+   height: 100vh;
+   width: 70%;
+   padding: 1% ;
+   overflow: scroll;
+   border: 2px solid #F7BC57;
+   border-radius: 15px;
+
+}
+
 .containerAthletes{
-  width: 70%;
+  width: cover;
   height: 100vh;
-  margin-top: 5rem;
-  border: hidden;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* position: relative; */
-  /* gap: 5px; */
-  padding-left: 7%;
+  
+  /* padding-left: 7%; */
   
   
 }

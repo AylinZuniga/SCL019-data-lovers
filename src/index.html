@@ -50,28 +50,54 @@
            <button type="submit" id="searcher" class="searcher"><i class="fa fa-search" id="icon-searh"></i></button></div>
           </div>
 
-          
+
+     <div class="filterGroup">
+
+      <div class="optionFiler" id="filterGender">
+        <i class="fas fa-venus-mars"></i>
+        filter by Gender
+        <i class="fas fa-chevron-down"></i>
+        <ul>
+          <li>All</li>
+          <li>F</li>
+          <li>M</li>
+        </ul>
+      </div>
 
 
+      <div class="optionFiler" id="filterMedal">
+        <i class="fas fa-medal"></i>
+        filter by Medal
+        <i class="fas fa-chevron-down"></i>
+        <ul>
+          <li>All</li>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Bronze</li>
+        </ul>
+      </div>
 
-     <div class="selectorGroup">
-      <button id="sport" class="sport">DEPORTES</button>
-      <button id="medals" class="medals">MEDALLAS</button>
-      <button id="countries" class="countries">PAÍSES</button>
-      <button id="medalTable" class="medalTable" >MEDALLERO</button>
+      <select id="disciplinas" class="disciplinas" name="disciplinas">
+        <option value="">Disciplinas</option></select>
+     
      </div>
 
-     <div class="posiciónOrdenador">
-      <select id="ordenador" class="ordenador">
-      <option class="option" value="">Ordenar</option>
-      <option class="option" value="A-Z">A-Z</option>
-      <option class="option" value="Z-A">Z-A</option>
+
+
+
+
     </select>
-     </div>
+
+    <div class="posiciónOrdenador">
+     <select id="ordenador" class="ordenador">
+     <option class="option" value="">Ordenar</option>
+     <option class="option" value="A-Z">A-Z</option>
+     <option class="option" value="Z-A">Z-A</option>
+   </select>
 
 
 
-    <main>
+    <main class="positionContainer" style="overflow: scroll; height: 20%">
     <div class="containerAthletes" id="containerAthletes"></div>
     </main>
       
