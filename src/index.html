@@ -57,59 +57,63 @@
     </section>
 
     <div class="iniciarFiltrado">
+
       <div class="invitationPosition">
         <p class="filtrarAhora">Ahora puedes filtrar a tus atletas favoritos</p>
       </div>
 
       <div class="inputSearch">
+        
         <input type="text" placeholder="Búsqueda por atletas" id="search" />
         <button type="submit" id="searcher" class="searcher">
-          <i class="fa fa-search" id="icon-searh"></i></button>
+          <i class="fa fa-search" id="icon-searh"></i>
+        </button>
       
-        <select id="ordenador" class="ordenador">
+        <select id="sort" class="sort">
           <option class="option" value="">Ordenar</option>
           <option class="option" value="A-Z">A-Z</option>
           <option class="option" value="Z-A">Z-A</option>
         </select>
+
       </div>
+
     </div>
 
 
-     <div class="filterGroup">
+    <div class="filterArea">
 
-      <div class="optionFiler" id="filterGender">
-        <i class="fas fa-venus-mars"></i>
-        filter by Gender
-        <i class="fas fa-chevron-down"></i>
-        <ul>
-          <li>All</li>
-          <li>F</li>
-          <li>M</li>
-        </ul>
-      </div>
+      <main class="positionContainer" style="overflow: scroll; height: 20%">
+       <div class="containerAthletes" id="containerAthletes"></div>
+      </main>
 
 
-      <div class="optionFiler" id="filterMedal">
-        <i class="fas fa-medal"></i>
-        filter by Medal
-        <i class="fas fa-chevron-down"></i>
-        <ul>
-          <li>All</li>
-          <li>Gold</li>
-          <li>Silver</li>
-          <li>Bronze</li>
-        </ul>
-      </div>
+      <div class="filterGroup">
 
-      <select id="disciplinas" class="disciplinas" name="disciplinas">
-        <option value="">Disciplinas</option></select>
+       <select id="gender" class="gender">
+        <option class="option" value="">Gender</option>
+        <option class="option" value="F">F</option>
+        <option class="option" value="M">M</option>
+       </select>
+
+       <select id="medals" class="medals">
+        <option class="option" value="">Medals</option>
+        <option class="option" value="F">Gold</option>
+        <option class="option" value="M">Silver</option>
+        <option class="option" value="M">Bronze</option>
+       </select>
+
+       <select id="sport" class="sport" name="sport">
+        <option value="">Sport</option></select>
+
+        <select id="team" class="team" name="team">
+        <option value="">Team</option></select>
      
-     </div>
+      </div>
+
+    </div>
 
 
-    <main class="positionContainer" style="overflow: scroll; height: 20%">
-    <div class="containerAthletes" id="containerAthletes"></div>
-    </main>
+    
       
     <div class= footerPosition>
     <footer class="footer">
