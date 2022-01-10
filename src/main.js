@@ -37,3 +37,4 @@ const dataAthletes = (newData) => {
 dataAthletes(infoAthletes );
 
 //console.log(dataAthletes, data);
+
