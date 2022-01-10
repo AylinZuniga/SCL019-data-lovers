@@ -1,84 +1,111 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Russo+One&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/866f260442.js" crossorigin="anonymous"></script>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/866f260442.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-
     <section>
-
       <div class="navbar">
-         <ul class="menu">
-         <li><a class="nav" href="#">Río 2016</a></li>
-         <li><a class="nav" href="#">Países</a></li>
-         <li><a class="nav" href="#">Deportes</a></li>
-         </ul>
-         <div id="rioImg" class="rioLogo"><img  class="rioImg" src="imagenes/rio.png"></div>
-      </div> 
-       
-      
+        <ul class="menu">
+          <li><a class="nav" href="#">Río 2016</a></li>
+          <li><a class="nav" href="#">Países</a></li>
+          <li><a class="nav" href="#">Deportes</a></li>
+        </ul>
+        <div id="rioImg" class="rioLogo">
+          <img class="rioImg" src="imagenes/rio.png" />
+        </div>
+      </div>
+
       <div class="parrafoPrincipal">
         <div>
-         <div class="positionParagraph"><p class="firstParagraph">Descubre la información que buscas <BR> sobre los atletas de los Juegos Olímpicos<BR>
-         RÍO 2016.</p></div>
-         <div id="logoImg" class="logoPosition"><img  class="logoImg" src="imagenes/logo.png"></div>
+          <div class="positionParagraph">
+            <p class="firstParagraph">
+              Descubre la información que buscas <br />
+              sobre los atletas de los Juegos Olímpicos<br />
+              RÍO 2016.
+            </p>
+          </div>
+          <div id="logoImg" class="logoPosition">
+            <img class="logoImg" src="imagenes/logo.png" />
+          </div>
         </div>
 
-         <div id="athletesImg" class="firtImg"><img  class="athletesImg" src="imagenes/iluatle.png"></div>
-      </div>
-      
-      
-      <div class="secondElement" >
-         
-         <div class="linePosition"><hr  class="lineStyle"></div>
-         <div class="eventDatePosition"><p class="eventDates">Celebrado en la ciudad de Río de Janeiro, Brasil, entre el 5 y el 21 de agosto de 2016.</p></div>
+        <div id="athletesImg" class="firtImg">
+          <img class="athletesImg" src="imagenes/iluatle.png" />
+        </div>
       </div>
 
+      <div class="secondElement">
+        <div class="linePosition"><hr class="lineStyle" /></div>
+        <div class="eventDatePosition">
+          <p class="eventDates">
+            Celebrado en la ciudad de Río de Janeiro, Brasil, entre el 5 y el 21
+            de agosto de 2016.
+          </p>
+        </div>
+      </div>
     </section>
 
-      <div class="iniciarFiltrado">
+    <div class="iniciarFiltrado">
+      <div class="invitationPosition">
+        <p class="filtrarAhora">Ahora puedes filtrar a tus atletas favoritos</p>
+      </div>
 
-      <div class="invitationPosition"><p class="filtrarAhora">Ahora puedes filtrar a tus atletas favoritos</p></div>
+      <div class="inputSearch">
+        <input type="text" placeholder="Búsqueda por atletas" id="search" />
+        <button type="submit" id="searcher" class="searcher">
+          <i class="fa fa-search" id="icon-searh"></i></button>
+      
+        <select id="ordenador" class="ordenador">
+          <option class="option" value="">Ordenar</option>
+          <option class="option" value="A-Z">A-Z</option>
+          <option class="option" value="Z-A">Z-A</option>
+        </select>
+      </div>
+    </div>
 
-         <div class="inputSearch">
-           <input type="text" placeholder="Búsqueda por atletas" id="search">
-           <button type="submit" id="searcher" class="searcher"><i class="fa fa-search" id="icon-searh"></i></button></div>
-          </div>
-
-          
-
-
-
-     <div class="selectorGroup">
+    <div class="selectorGroup">
       <button id="sport" class="sport">DEPORTES</button>
       <button id="medals" class="medals">MEDALLAS</button>
       <button id="countries" class="countries">PAÍSES</button>
-      <button id="medalTable" class="medalTable" >MEDALLERO</button>
-     </div>
-
-     <div class="posiciónOrdenador">
-      <select id="ordenador" class="ordenador">
-      <option class="option" value="">Ordenar</option>
-      <option class="option" value="A-Z">A-Z</option>
-      <option class="option" value="Z-A">Z-A</option>
-    </select>
-     </div>
-
-
-
-    <main>
-    <div class="containerAthletes" id="containerAthletes"></div>
-    </main>
-      
-    <div class= footerPosition>
-    <footer class="footer">
-      <p> Celebrado en la ciudad de Río de Janeiro, Brasil, entre el 5 y el 21 de agosto de 2016</p></footer>
+      <button id="medalTable" class="medalTable">MEDALLERO</button>
     </div>
+
+    
+    <main style="overflow: scroll; height: 200px">
+      <div class="containerAthletes" id="containerAthletes"></div>
+    </main>
+
+    <div class= footerPosition>
+      <footer class="footer">
+        <p> Celebrado en la ciudad de Río de Janeiro, Brasil, entre el 5 y el 21 de agosto de 2016</p></footer>
+      </div>
+  
+
+    <!-- <footer>
+      <div class="containerFooter">
+        <div class="column1">
+          <img class="antorchaImg" src="imagenes/antorcha.png"/>
+        </div>
+        <div class="column2">
+          <p class="fecha"> Celebrado en la ciudad de Río de Janeiro, Brasil, entre el 5 y el 21
+            de agosto de 2016.</p>
+        </div>
+        <div class="column3">
+          <p class="comite"> Comité olímpico internacional | Sobre nosotros | Correos</p>
+        </div>
+      </div>
+    </footer> -->
 
 
     <div id="root"></div>
