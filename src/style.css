@@ -200,7 +200,7 @@ padding: 0%;
  }
  
  .optionFiler.open ul {
-   /* display: block; */
+    display: block; 
  }
  
  .optionFiler ul li {
@@ -225,6 +225,10 @@ padding: 0%;
 
 }
 
+.ordenador{
+   font-family:'Righteous';
+   font-size: 1vw;
+}
 .containerAthletes{
   width: cover;
   height: 100vh;
@@ -235,6 +239,9 @@ padding: 0%;
   /* padding-left: 7%; */
   
   
+  /* position: relative; */
+  /* gap: 5px; */
+  padding-left: 7%;
 }
 
 .card{
@@ -245,12 +252,43 @@ padding: 0%;
    /* padding: 15px 11px; */
    border-radius: 15px;
    text-align: center;
-   
 }
-.footer {
+
+/* footer{
+   background: #EB6062;
+   color: #ffffff;
+   font-family:'Righteous';
+   font-size: 1vw;
+   width: 100%;
+   margin-right: 0px; 
+   margin-left: 0px;
+   padding-top: 1%;
+   height: 10vh;
+}
+
+.containerFooter{
+   display: flex;
+   justify-content: space-between;
+   text-justify: distribute;
+}
+.column1{
+   height: 20vh;
+   width: 9%;
+}
+
+.antorchaImg{
+   width: 40%
+}
+ */
+
+ .footer {
    background-color: rgb(238, 66, 66);
    text-align: center;
    color: rgb(223, 219, 219);
    margin-top: 1rem;
    padding: 1rem;
+   font-family:'Righteous';
+   font-size: 1vw;
 }
+
+
