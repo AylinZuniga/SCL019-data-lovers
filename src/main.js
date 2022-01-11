@@ -1,6 +1,7 @@
 //eventos del dom 
 
 
+import { searchInput } from './data.js';
 import data from './data/athletes/athletes.js'; // importamos la data desde athletes.js
 
 
@@ -10,6 +11,10 @@ import data from './data/athletes/athletes.js'; // importamos la data desde athl
 
 const infoAthletes = data.athletes;
 const athletesProfil = document.getElementById('containerAthletes');
+const inputSearch = document.getElementById('search'); //se crea la constante inputSearch
+
+
+
 
 const dataAthletes = (newData) => {
     athletesProfil.innerHTML = '';
@@ -65,3 +70,37 @@ const orderAZ = (order) => {
       dataAthletes(dataOrdenada);
     }
   });
+
+ //funcionalidad al selector id='gender'
+const sortGender = document.querySelector('#gender'); //traigo el selector sort
+
+const orderF = (order) => {
+    const orderlyFemale = order.sort((f, m) => ((f.gender.toUpperCase() > m.gender.toUpperCase()) ? 1 : -1)); //ordene a partir de la data que tiene
+    return orderlyFemale;
+  };
+
+  const orderM = (order) => {
+    const orderlyMale = order.sort((f, m) => ((f.gender.toUpperCase() < m.gender.toUpperCase()) ? 1 : -1));
+    return orderlyMale;
+  };
+
+  sortGender.addEventListener('change', (event) => { //escucho evento const sortOption
+    
+    const ordenSeleccionado = event.target.value;    //creo const que trae el valor de la seleccion para saber como se quiere ordenar 
+    if (ordenSeleccionado === 'F') {               // revisa cual es la manera de ordenar y llama al metodo que se creo arriba 
+      const dataOrdenada = orderF(infoAthletes);   
+      dataAthletes(dataOrdenada);// agrega la data al cuadro donde se ven los datos a partir de la aplicacion del metodo dataAthletes
+    }
+    if (ordenSeleccionado === 'M') {
+      const dataOrdenada = orderM(infoAthletes);
+      dataAthletes(dataOrdenada);
+    }
+  });
+
+ /* id: search, buscador por atleta */
+
+    inputSearch.addEventListener('input', (e) => {
+    const { value } = e.target;
+    dataAthletes(searchInput(infoAthletes, value));
+  });
+ 
