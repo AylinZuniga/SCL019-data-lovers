@@ -11,8 +11,6 @@ import data from './data/athletes/athletes.js'; // importamos la data desde athl
 
 const infoAthletes = data.athletes;
 const athletesProfil = document.getElementById('containerAthletes');
-const inputSearch = document.getElementById('search'); //se crea la constante inputSearch
-
 
 
 
@@ -35,6 +33,11 @@ const dataAthletes = (newData) => {
     <p class = "gender-atlethe">gender: ${arrays.gender}</p>
     </div> 
     `;
+    // modal
+    card.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      atletheDetails(arrays);
+    });
   
    athletesProfil.appendChild(card);
 });
@@ -71,36 +74,60 @@ const orderAZ = (order) => {
     }
   });
 
- //funcionalidad al selector id='gender'
-const sortGender = document.querySelector('#gender'); //traigo el selector sort
-
-const orderF = (order) => {
-    const orderlyFemale = order.sort((f, m) => ((f.gender.toUpperCase() > m.gender.toUpperCase()) ? 1 : -1)); //ordene a partir de la data que tiene
-    return orderlyFemale;
-  };
-
-  const orderM = (order) => {
-    const orderlyMale = order.sort((f, m) => ((f.gender.toUpperCase() < m.gender.toUpperCase()) ? 1 : -1));
-    return orderlyMale;
-  };
-
-  sortGender.addEventListener('change', (event) => { //escucho evento const sortOption
-    
-    const ordenSeleccionado = event.target.value;    //creo const que trae el valor de la seleccion para saber como se quiere ordenar 
-    if (ordenSeleccionado === 'F') {               // revisa cual es la manera de ordenar y llama al metodo que se creo arriba 
-      const dataOrdenada = orderF(infoAthletes);   
-      dataAthletes(dataOrdenada);// agrega la data al cuadro donde se ven los datos a partir de la aplicacion del metodo dataAthletes
-    }
-    if (ordenSeleccionado === 'M') {
-      const dataOrdenada = orderM(infoAthletes);
-      dataAthletes(dataOrdenada);
-    }
-  });
 
  /* id: search, buscador por atleta */
+ const inputSearch = document.getElementById('search'); //se crea la constante inputSearch
 
     inputSearch.addEventListener('input', (e) => {
     const { value } = e.target;
     dataAthletes(searchInput(infoAthletes, value));
   });
  
+
+
+  // modal
+
+const modal = document.getElementById('modal'); //se crea la constante modal
+
+const atletheDetails = (arrays) => {
+  const modalContainer = modal.querySelector('.headModal');
+
+  modalContainer.innerHTML = `
+    <div>
+    <img src = ${arrays.gender === 'F'
+    ? './imagenes/athletefemale.png'
+    : './imagenes/athletemale.png'}
+    width = 110 height = 110> 
+    </div>
+    <div class="infoHead" >
+      <h1>
+      <strong>${arrays.name}</strong>
+      </h1>
+      <p><strong>Weigth:</strong>
+        ${arrays.weight}
+      </p>
+      <p><strong>Height:</strong>
+        ${arrays.height}
+      </p>
+      <p><strong>Team:</strong>
+        ${arrays.team}
+      </p>
+      <p><strong>Sport:</strong>
+        ${arrays.sport}
+      </p>
+      <p><strong>Event:</strong>
+        ${arrays.event}
+      </p>
+      <p><strong>Medal:</strong>
+        ${arrays.medal}
+      </p>
+    </div>
+  `;
+};
+
+/* Para cerrar el modal */
+const closeModal = document.getElementById('close');
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
