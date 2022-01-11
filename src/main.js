@@ -3,8 +3,7 @@
 
 import data from './data/athletes/athletes.js'; // importamos la data desde athletes.js
 
-
-//import { filterData, statisticsData, orderData } from "./data.js";
+import { genderFiler,medalFilter } from "./data.js";
 
 
 
@@ -48,12 +47,12 @@ const orderAZ = (order) => {
     return orderlyAZ;
   };
 
-  const orderZA = (order) => {
+const orderZA = (order) => {
     const orderlyZA = order.sort((a, b) => ((a.name.toUpperCase() < b.name.toUpperCase()) ? 1 : -1));
     return orderlyZA;
   };
 
-  sortOption.addEventListener('change', (event) => { //escucho evento const sortOption
+sortOption.addEventListener('change', (event) => { //escucho evento const sortOption
     
     const ordenSeleccionado = event.target.value;    //creo const que trae el valor de la seleccion para saber como se quiere ordenar 
     if (ordenSeleccionado === 'A-Z') {               // revisa cual es la manera de ordenar y llama al metodo que se creo arriba 
@@ -65,3 +64,27 @@ const orderAZ = (order) => {
       dataAthletes(dataOrdenada);
     }
   });
+
+
+  //filtro por genero 
+
+   const sortGender = document.querySelector('#gender');// obtener el selector por genero
+
+   sortGender.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+    
+    const dataOrdenada =  genderFiler(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+    dataAthletes(dataOrdenada);
+  });
+
+
+ //filtro por medalla
+
+ const sortMedal = document.querySelector('#medals');// obtener el selector por genero
+
+ sortMedal.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+  
+  const dataOrdenada =  medalFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+  dataAthletes(dataOrdenada);
+});
+
+

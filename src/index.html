@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&family=Russo+One&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Righteous&family=Roboto&family=Russo+One&display=swap" rel="stylesheet">
+    
     <script
       src="https://kit.fontawesome.com/866f260442.js"
       crossorigin="anonymous"
@@ -89,18 +89,20 @@
 
       <div class="filterGroup">
 
-       <select id="gender" class="gender">
-        <option class="option" value="">Gender</option>
-        <option class="option" value="F">F</option>
-        <option class="option" value="M">M</option>
+       
+       <select id="medals" class="medals">
+        <option class="option" value="All">Medals</option>
+        <option class="option" value="Gold">Gold</option>
+        <option class="option" value="Silver">Silver</option>
+        <option class="option" value="Bronze">Bronze</option>
        </select>
 
-       <select id="medals" class="medals">
-        <option class="option" value="">Medals</option>
-        <option class="option" value="F">Gold</option>
-        <option class="option" value="M">Silver</option>
-        <option class="option" value="M">Bronze</option>
+       <select id="gender" class="gender">
+        <option class="option" value="All">Gender</option>
+        <option class="option" value="F">Female</option>
+        <option class="option" value="M">Male</option>
        </select>
+
 
        <select id="sport" class="sport" name="sport">
         <option value="">Sport</option></select>
