@@ -4,8 +4,7 @@
 import { searchInput } from './data.js';
 import data from './data/athletes/athletes.js'; // importamos la data desde athletes.js
 
-
-//import { filterData, statisticsData, orderData } from "./data.js";
+import { genderFiler,medalFilter, allSport, allTeam, sportFilter,teamFilter} from "./data.js";
 
 
 
@@ -56,12 +55,12 @@ const orderAZ = (order) => {
     return orderlyAZ;
   };
 
-  const orderZA = (order) => {
+const orderZA = (order) => {
     const orderlyZA = order.sort((a, b) => ((a.name.toUpperCase() < b.name.toUpperCase()) ? 1 : -1));
     return orderlyZA;
   };
 
-  sortOption.addEventListener('change', (event) => { //escucho evento const sortOption
+sortOption.addEventListener('change', (event) => { //escucho evento const sortOption
     
     const ordenSeleccionado = event.target.value;    //creo const que trae el valor de la seleccion para saber como se quiere ordenar 
     if (ordenSeleccionado === 'A-Z') {               // revisa cual es la manera de ordenar y llama al metodo que se creo arriba 
@@ -75,6 +74,32 @@ const orderAZ = (order) => {
   });
 
 
+
+  //filtro por genero 
+
+   const sortGender = document.querySelector('#gender');// obtener el selector por genero
+
+   sortGender.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+    
+    const dataOrdenada =  genderFiler(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+    dataAthletes(dataOrdenada);
+  });
+
+
+
+ //filtro por medalla
+
+ const sortMedal = document.querySelector('#medals');// obtener el selector por genero
+
+ sortMedal.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+  
+  const dataOrdenada =  medalFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+  dataAthletes(dataOrdenada);
+});
+
+
+
+
  /* id: search, buscador por atleta */
  const inputSearch = document.getElementById('search'); //se crea la constante inputSearch
 
@@ -83,6 +108,7 @@ const orderAZ = (order) => {
     dataAthletes(searchInput(infoAthletes, value));
   });
  
+
 
 
   // modal
@@ -131,3 +157,52 @@ const closeModal = document.getElementById('close');
 closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
 });
+=======
+  //llenado de select id sport con la data de js
+const selectSport = document.getElementById("sport");
+const uniqueSport = allSport(infoAthletes) //cree una variable para darle el resultado del metodo y  le doy un paramatro al metodo y lo ejecuto 
+
+uniqueSport.forEach(element => {
+  var option = document.createElement("option");
+  option.value = element;
+  option.text = element;
+
+  selectSport.appendChild(option); //las opciones que se sacan de arriba las va sumando en el select 
+});
+
+
+//llenado de select id team con la data de js
+
+const selectTeam = document.getElementById("team");
+const uniqueTeam = allTeam(infoAthletes)
+
+uniqueTeam.forEach(element => {
+  var option = document.createElement("option");
+  option.value = element;
+  option.text = element;
+
+  selectTeam.appendChild(option);
+});
+
+
+// filtro por sport
+
+const sortSport = document.querySelector('#sport');// obtener el selector por genero
+
+sortSport.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+ 
+ const dataOrdenada = sportFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+ dataAthletes(dataOrdenada);
+});
+
+
+// filtro por Team
+
+const sortTeam = document.querySelector('#team');// obtener el selector por genero
+
+sortTeam.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+ 
+ const dataOrdenada = teamFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+ dataAthletes(dataOrdenada);
+});
+

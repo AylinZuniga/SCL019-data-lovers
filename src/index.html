@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&family=Russo+One&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Righteous&family=Roboto&family=Russo+One&display=swap" rel="stylesheet">
+    
     <script
       src="https://kit.fontawesome.com/866f260442.js"
       crossorigin="anonymous"
@@ -102,41 +102,45 @@
 
       <div class="filterGroup">
 
-       <select id="gender" class="gender">
-        <option class="option" value="">Gender</option>
-        <option class="option" value="F">F</option>
-        <option class="option" value="M">M</option>
+       
+       <select id="medals" class="medals">
+        <option class="option" value="All">Medals</option>
+        <option class="option" value="Gold">Gold</option>
+        <option class="option" value="Silver">Silver</option>
+        <option class="option" value="Bronze">Bronze</option>
        </select>
 
-       <select id="medals" class="medals">
-        <option class="option" value="">Medals</option>
-        <option class="option" value="G">Gold</option>
-        <option class="option" value="S">Silver</option>
-        <option class="option" value="B">Bronze</option>
+       <select id="gender" class="gender">
+        <option class="option" value="All">Gender</option>
+        <option class="option" value="F">Female</option>
+        <option class="option" value="M">Male</option>
        </select>
+
 
        <select id="sport" class="sport" name="sport">
-        <option value="">Sport</option>
-      </select>
+        <option value="All">Sport</option>
+       </select>
 
         <select id="team" class="team" name="team">
-        <option value="">Team</option>
-      </select>
+        <option value=" ">Team</option>
+        </select>
      
       </div>
 
     </div>
 
-    
-    <footer class="footer">
 
+    
+      
+    <div class= footerPosition>
+    <footer class="footer">
       <div class="antorchaImg">
         <img class="antorchaImg" src="imagenes/antorcha.png"/>
       </div>
       <p> Celebrado en la ciudad de Río de Janeiro, Brasil, entre el 5 y el 21 de agosto de 2016</p>
       <p class="comite"> Comité olímpico internacional | Sobre nosotros | Correos</p>
-      
     </footer>
+
 
     <div id="root"></div>
     <script src="main.js" type="module"></script>
