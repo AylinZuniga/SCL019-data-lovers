@@ -1,14 +1,19 @@
 //eventos del dom 
 
 
+import { searchInput } from './data.js';
 import data from './data/athletes/athletes.js'; // importamos la data desde athletes.js
 
-import { genderFiler,medalFilter } from "./data.js";
+import { genderFiler,medalFilter, allSport, allTeam, sportFilter,teamFilter} from "./data.js";
 
 
 
 const infoAthletes = data.athletes;
 const athletesProfil = document.getElementById('containerAthletes');
+const inputSearch = document.getElementById('search'); //se crea la constante inputSearch
+
+
+
 
 const dataAthletes = (newData) => {
     athletesProfil.innerHTML = '';
@@ -88,3 +93,59 @@ sortOption.addEventListener('change', (event) => { //escucho evento const sortOp
 });
 
 
+
+
+ /* id: search, buscador por atleta */
+
+    inputSearch.addEventListener('input', (e) => {
+    const { value } = e.target;
+    dataAthletes(searchInput(infoAthletes, value));
+  });
+ 
+  //llenado de select id sport con la data de js
+const selectSport = document.getElementById("sport");
+const uniqueSport = allSport(infoAthletes) //cree una variable para darle el resultado del metodo y  le doy un paramatro al metodo y lo ejecuto 
+
+uniqueSport.forEach(element => {
+  var option = document.createElement("option");
+  option.value = element;
+  option.text = element;
+
+  selectSport.appendChild(option); //las opciones que se sacan de arriba las va sumando en el select 
+});
+
+
+//llenado de select id team con la data de js
+
+const selectTeam = document.getElementById("team");
+const uniqueTeam = allTeam(infoAthletes)
+
+uniqueTeam.forEach(element => {
+  var option = document.createElement("option");
+  option.value = element;
+  option.text = element;
+
+  selectTeam.appendChild(option);
+});
+
+
+// filtro por sport
+
+const sortSport = document.querySelector('#sport');// obtener el selector por genero
+
+sortSport.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+ 
+ const dataOrdenada = sportFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+ dataAthletes(dataOrdenada);
+});
+
+
+// filtro por Team
+
+const sortTeam = document.querySelector('#team');// obtener el selector por genero
+
+sortTeam.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+ 
+ const dataOrdenada = teamFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+ dataAthletes(dataOrdenada);
+});
