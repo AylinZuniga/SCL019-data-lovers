@@ -10,8 +10,6 @@ import { genderFiler,medalFilter, allSport, allTeam, sportFilter,teamFilter} fro
 
 const infoAthletes = data.athletes;
 const athletesProfil = document.getElementById('containerAthletes');
-const inputSearch = document.getElementById('search'); //se crea la constante inputSearch
-
 
 
 
@@ -34,6 +32,11 @@ const dataAthletes = (newData) => {
     <p class = "gender-atlethe">gender: ${arrays.gender}</p>
     </div> 
     `;
+    // modal
+    card.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      atletheDetails(arrays);
+    });
   
    athletesProfil.appendChild(card);
 });
@@ -71,6 +74,7 @@ sortOption.addEventListener('change', (event) => { //escucho evento const sortOp
   });
 
 
+
   //filtro por genero 
 
    const sortGender = document.querySelector('#gender');// obtener el selector por genero
@@ -80,6 +84,7 @@ sortOption.addEventListener('change', (event) => { //escucho evento const sortOp
     const dataOrdenada =  genderFiler(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
     dataAthletes(dataOrdenada);
   });
+
 
 
  //filtro por medalla
@@ -96,12 +101,63 @@ sortOption.addEventListener('change', (event) => { //escucho evento const sortOp
 
 
  /* id: search, buscador por atleta */
+ const inputSearch = document.getElementById('search'); //se crea la constante inputSearch
 
     inputSearch.addEventListener('input', (e) => {
     const { value } = e.target;
     dataAthletes(searchInput(infoAthletes, value));
   });
  
+
+
+
+  // modal
+
+const modal = document.getElementById('modal'); //se crea la constante modal
+
+const atletheDetails = (arrays) => {
+  const modalContainer = modal.querySelector('.headModal');
+
+  modalContainer.innerHTML = `
+    <div>
+    <img src = ${arrays.gender === 'F'
+    ? './imagenes/athletefemale.png'
+    : './imagenes/athletemale.png'}
+    width = 110 height = 110> 
+    </div>
+    <div class="infoHead" >
+      <h1>
+      <strong>${arrays.name}</strong>
+      </h1>
+      <p><strong>Weigth:</strong>
+        ${arrays.weight}
+      </p>
+      <p><strong>Height:</strong>
+        ${arrays.height}
+      </p>
+      <p><strong>Team:</strong>
+        ${arrays.team}
+      </p>
+      <p><strong>Sport:</strong>
+        ${arrays.sport}
+      </p>
+      <p><strong>Event:</strong>
+        ${arrays.event}
+      </p>
+      <p><strong>Medal:</strong>
+        ${arrays.medal}
+      </p>
+    </div>
+  `;
+};
+
+/* Para cerrar el modal */
+const closeModal = document.getElementById('close');
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+=======
   //llenado de select id sport con la data de js
 const selectSport = document.getElementById("sport");
 const uniqueSport = allSport(infoAthletes) //cree una variable para darle el resultado del metodo y  le doy un paramatro al metodo y lo ejecuto 
@@ -149,3 +205,4 @@ sortTeam.addEventListener('change', (event) => { //escucho evento donde cambia l
  const dataOrdenada = teamFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
  dataAthletes(dataOrdenada);
 });
+

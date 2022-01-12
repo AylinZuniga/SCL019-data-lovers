@@ -195,12 +195,11 @@ padding: 0%;
    border-radius: 15px;
    margin-left: 2%;
    margin-top: 5%;
+
    margin-bottom: 5%;
    /* gap: 5%; */
 
 }
-
-
 
 .containerAthletes{
   width: cover;
@@ -208,7 +207,9 @@ padding: 0%;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
+
   gap:2%;
+
 
 }
 
@@ -219,6 +220,7 @@ padding: 0%;
    /* border: 2px solid #F7BC57; */
    border-radius: 15px;
    text-align: center;
+
    padding-top: 2%;
    font-family:'Roboto', sans-serif;
   
@@ -275,36 +277,16 @@ padding: 0%;
 /* footer{
    background: #EB6062;
    color: #ffffff;
+
    font-family:'Righteous';
    font-size: 1vw;
-   width: 100%;
-   margin-right: 0px; 
-   margin-left: 0px;
-   padding-top: 1%;
-   height: 10vh;
 }
 
-.containerFooter{
-   display: flex;
-   justify-content: space-between;
-   text-justify: distribute;
-}
-.column1{
-   height: 20vh;
-   width: 9%;
-}
-
-.antorchaImg{
-   width: 40%
-}
- */
 
  .footer {
    background-color: rgb(238, 66, 66);
    text-align: center;
    color: rgb(223, 219, 219);
- 
-   /* padding-top: 1%; */
    font-family:'Righteous';
    font-size: 1vw;
    display: flex;
@@ -316,7 +298,42 @@ padding: 0%;
 .antorchaImg{
    width: 3vw;
    margin-left: -1%;
+}
 
+.modal{
+   background-color: rgba(239, 248, 245, 0.973);
+  
+   display: flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  height: 50vh;
+  border-radius: 15px;
+  font-family:'Righteous';
+   font-size: 1vw;
+   /* position:absolute; */
+   
+}
+
+.containerModal{
+   background: #ffff;
+   border-radius: 15px;
+   /* margin: 10%; */
+   /* width: 80%;
+   height: 100%; */
+   flex-direction: row;
+   /* position: relative; */
+   padding: 5%;
+
+}
+
+.close{
+   border: none;
+   font-size: 20px;
+   top: 20px;
+   right: 20px;
 }
 
 
