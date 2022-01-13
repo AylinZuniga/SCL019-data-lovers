@@ -149,3 +149,16 @@ sortTeam.addEventListener('change', (event) => { //escucho evento donde cambia l
  const dataOrdenada = teamFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
  dataAthletes(dataOrdenada);
 });
+
+//position pixed header
+
+window.onscroll = function() {myFunction()};
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
