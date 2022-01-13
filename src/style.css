@@ -1,339 +1,309 @@
-*{
-margin: 0 auto;
-padding: 0%;
-
+* {
+  margin: 0 auto;
+  padding: 0%;
 }
 
- .navbar{
-    display: flex;
-    flex-direction: row;
-    background-image: url(imagenes/banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 1%;
- }
-
-
-.bannerImg{
-    width: 105%;
-    margin: 0px;
-    padding: 0px; 
-    margin-right: 0px;  
-    
-} 
-
-.rioLogo{
-   margin-right: 3%;
-   width: 8vw;
-   background-color: rgb(255, 255, 255); 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-image: url(imagenes/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 1%;
 }
 
-.rioImg{
-   
-   width: 100%;
-  
+.bannerImg {
+  width: 105%;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 0px;
 }
 
-.menu{
-   padding: 0%;
-   background-color: black;
-   width: 90%;
-   height: 2%;
-   left: 2%;
-   font-family: 'Righteous';
-   font-size: 2vw;;
-   margin-top: 3vh;
-   margin-left: 2vh;
+.rioLogo {
+  margin-right: 3%;
+  width: 8vw;
+  background-color: rgb(255, 255, 255);
 }
 
-.menu li a{
-   text-decoration: none;
-   color:#ffffff ;
-   padding: 20px;
-   display: block;
-   padding-top: 15%;
+.rioImg {
+  width: 100%;
 }
 
-.menu li{
-   display: inline-block;
-   text-align: center;
+.menu {
+  padding: 0%;
+  background-color: black;
+  width: 90%;
+  height: 2%;
+  left: 2%;
+  font-family: "Righteous";
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-left: 2vh;
 }
 
-
-.parrafoPrincipal{
-   width: 100vw;
-   display: flex;
-   margin-right: 2vw;
-   padding: 2% 0% 0%;
- }
-
- .positionParagraph{
-   margin-left: 4%;
- }
-
- .firstParagraph{
-   font-family: 'Righteous';
-   font-size: 2vw;    
- }
- .firtImg{
-   margin-right: -0.7%;
-   padding-top: 5%;
- }
- .athletesImg{
-   width: 28vw;  
-}
-.logoPosition{
-   padding-top: 26%;
-   padding-left: 4%;
-}
- .logoImg{
-   width: 9%;
- }
-
-
-.secondElement{
-   display: flex;
-   flex-direction: column;
-   /* background-color: bisque; */
-   padding-left: 1.8%;
-   justify-content: flex-start;
+.menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px;
+  display: block;
+  padding-top: 15%;
 }
 
- .linePosition{
-    padding-bottom: 2%;
-   
- }
- .lineStyle{
-   height: 0.8vh;
-   background-color:  black;
-   width: 98vw;
-   border: none;
- }
- .eventDatePosition{
-    
-   margin-left: -0.1%;
+.menu li {
+  display: inline-block;
+  text-align: center;
+}
+
+.parrafoPrincipal {
+  width: 100vw;
+  display: flex;
+  margin-right: 2vw;
+  padding: 2% 0% 0%;
+}
+
+.positionParagraph {
+  margin-left: 4%;
+}
+
+.firstParagraph {
+  font-family: "Righteous";
+  font-size: 2vw;
+}
+.firtImg {
+  margin-right: -0.7%;
+  padding-top: 5%;
+}
+.athletesImg {
+  width: 28vw;
+}
+.logoPosition {
+  padding-top: 26%;
+  padding-left: 4%;
+}
+.logoImg {
+  width: 9%;
+}
+
+.secondElement {
+  display: flex;
+  flex-direction: column;
+  /* background-color: bisque; */
+  padding-left: 1.8%;
+  justify-content: flex-start;
+}
+
+.linePosition {
+  padding-bottom: 2%;
+}
+.lineStyle {
+  height: 0.8vh;
+  background-color: black;
+  width: 98vw;
+  border: none;
+}
+.eventDatePosition {
+  margin-left: -0.1%;
   padding-bottom: 1%;
 }
 
- .eventDates{
-   font-family:'Righteous';
-   font-size: 1vw;
-  
+.eventDates {
+  font-family: "Righteous";
+  font-size: 1vw;
 }
 
 /*fin area bienvenida*/
 
-
-
-
-
-
-
-
 .iniciarFiltrado {
-   display: flex;
-   flex-direction: column;
-   padding-left: 1.8%;
-   justify-content: left;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.8%;
+  justify-content: left;
 }
 
-.invitationPosition{
-   margin-left: -0.1%;
-   padding-bottom: 1%; 
+.invitationPosition {
+  margin-left: -0.1%;
+  padding-bottom: 1%;
 }
 
-.filtrarAhora{
-   font-family:'Righteous';
-   font-size: 1.5vw;
+.filtrarAhora {
+  font-family: "Righteous";
+  font-size: 1.5vw;
 }
 
-.inputSearch{
-   margin-left: -0.1%;
-   padding-bottom: 1%; 
+.inputSearch {
+  margin-left: -0.1%;
+  padding-bottom: 1%;
 }
 
-#search{
-   font-family:'Righteous';
-   font-size: 1vw;
+#search {
+  font-family: "Righteous";
+  font-size: 1vw;
 }
 /*filtros*/
 
-.sort{
-   font-family:'Righteous';
-   font-size: 1vw;
+.sort {
+  font-family: "Righteous";
+  font-size: 1vw;
 }
-
-
-
-
-
 
 /*fin clase filtros*/
 
 /* class= 'filter area' estilo al contenedor que contiene los atletas y filtro */
 
-.filterArea{
-   display: flex;
+.filterArea {
+  display: flex;
 }
 
-.filterGroup{
-   display: flex;
-   flex-direction: column;
-   padding-right: 2%;
-   margin-top: 5%;
-   gap: 2%;
-
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  padding-right: 2%;
+  margin-top: 5%;
+  gap: 2%;
 }
 
-.positionContainer{
-   height: 100vh;
-   width: 70%;
-   padding: 1%;
-   overflow: scroll;
-   border: 5px solid #F7BC57;
-   border-radius: 15px;
-   margin-left: 2%;
-   margin-top: 5%;
+.positionContainer {
+  height: 100vh;
+  width: 70%;
+  padding: 1%;
+  overflow: scroll;
+  border: 5px solid #f7bc57;
+  border-radius: 15px;
+  margin-left: 2%;
+  margin-top: 5%;
 
-   margin-bottom: 5%;
-   /* gap: 5%; */
-
+  margin-bottom: 5%;
+  /* gap: 5%; */
 }
 
-.containerAthletes{
+.containerAthletes {
   width: cover;
   height: 100vh;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  gap:2%;
-
-
+  gap: 2%;
 }
 
-.card{
-   background-color: #f7bc5763;
-   width: 16vw;
-   height: 30vh;
-   /* border: 2px solid #F7BC57; */
-   border-radius: 15px;
-   text-align: center;
+.card {
+  background-color: #f7bc5763;
+  width: 16vw;
+  height: 30vh;
+  /* border: 2px solid #F7BC57; */
+  border-radius: 15px;
+  text-align: center;
 
-   padding-top: 2%;
-   font-family:'Roboto', sans-serif;
-  
+  padding-top: 2%;
+  font-family: "Roboto", sans-serif;
 }
-
-
 
 /* filtros */
 
-.gender{
-   width: 13vw;
-   height: 7vh;
-   border-radius: 4px;
-   font-size: 25px;
-   background-color:#4FB474; color: rgb(255, 255, 255);
-   border: none;
-   font-family:'Bebas Neue', cursive;
-   text-align: center;
+.gender {
+  width: 13vw;
+  height: 7vh;
+  border-radius: 4px;
+  font-size: 25px;
+  background-color: #4fb474;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
 }
 
-.medals{
-   width: 13vw;
-   height: 7vh;
-   border-radius: 4px;
-   font-size: 25px;
-   background-color:#EB6062; color: rgb(255, 255, 255);
-   border: none;
-   font-family:'Bebas Neue', cursive;
-   text-align: center;
+.medals {
+  width: 13vw;
+  height: 7vh;
+  border-radius: 4px;
+  font-size: 25px;
+  background-color: #eb6062;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
 }
 
-.sport{
-   width: 13vw;
-   height: 7vh;
-   border-radius: 4px;
-   font-size: 25px;
-   background-color:#F7BC57; color: rgb(255, 255, 255);
-   border: none;
-   font-family:'Bebas Neue', cursive;
-   text-align: center;
+.sport {
+  width: 13vw;
+  height: 7vh;
+  border-radius: 4px;
+  font-size: 25px;
+  background-color: #f7bc57;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
 }
-.team{
-   width: 13vw;
-   height: 7vh;
-   border-radius: 4px;
-   font-size: 25px;
-   background-color:#16A0D1; color: rgb(255, 255, 255);
-   border: none;
-   font-family:'Bebas Neue', cursive;
-   text-align: center;
-}
-
-
-/* footer{
-   background: #EB6062;
-   color: #ffffff;
-
-   font-family:'Righteous';
-   font-size: 1vw;
+.team {
+  width: 13vw;
+  height: 7vh;
+  border-radius: 4px;
+  font-size: 25px;
+  background-color: #16a0d1;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
 }
 
+.footer {
+  background: #eb6062;
+  color: #ffffff;
 
- .footer {
-   background-color: rgb(238, 66, 66);
-   text-align: center;
-   color: rgb(223, 219, 219);
-   font-family:'Righteous';
-   font-size: 1vw;
-   display: flex;
-   padding-top: 30px;
-   padding-right: 0px;
-   padding-left: 15px;
+  font-family: "Righteous";
+  font-size: 1vw;
 }
 
-.antorchaImg{
-   width: 3vw;
-   margin-left: -1%;
+.footer {
+  background-color: rgb(238, 66, 66);
+  text-align: center;
+  color: rgb(223, 219, 219);
+  font-family: "Righteous";
+  font-size: 1vw;
+  display: flex;
+  padding-top: 30px;
+  padding-right: 0px;
+  padding-left: 15px;
 }
 
-.modal{
-   background-color: rgba(239, 248, 245, 0.973);
-  
-   display: flex;
-  align-items:flex-start;
-  justify-content:flex-start;
+.antorchaImg {
+  width: 3vw;
+  margin-left: -1%;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 30vw;
-  height: 50vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.containerModal {
+  background: white;
   border-radius: 15px;
-  font-family:'Righteous';
-   font-size: 1vw;
-   /* position:absolute; */
-   
+  box-shadow: 10px 10px 20px rgb(78, 74, 58);
+  display: flex;
+  margin: 0 auto;
+  width: 30%;
+  height: 50%;
+  flex-direction: row;
+  font-family: "Righteous";
+  font-size: 1vw;
+  padding-top: 3%;
 }
 
-.containerModal{
-   background: #ffff;
-   border-radius: 15px;
-   /* margin: 10%; */
-   /* width: 80%;
-   height: 100%; */
-   flex-direction: row;
-   /* position: relative; */
-   padding: 5%;
-
+.close {
+  border: none;
+  font-size: 20px;
+  top: 180px;
+  right: 550px;
+  background-color: transparent;
+  position: absolute;
 }
-
-.close{
-   border: none;
-   font-size: 20px;
-   top: 20px;
-   right: 20px;
-}
-
-

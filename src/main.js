@@ -32,19 +32,15 @@ const dataAthletes = (newData) => {
     <p class = "gender-atlethe">gender: ${arrays.gender}</p>
     </div> 
     `;
-    // modal
+    // área del modal
     card.addEventListener('click', () => {
       modal.style.display = 'flex';
       atletheDetails(arrays);
     });
-  
    athletesProfil.appendChild(card);
 });
 };
 dataAthletes(infoAthletes );
-
-//console.log(dataAthletes, data);
-
 
 
 //funcionalidad al selector id='sort'
@@ -98,8 +94,6 @@ sortOption.addEventListener('change', (event) => { //escucho evento const sortOp
 });
 
 
-
-
  /* id: search, buscador por atleta */
  const inputSearch = document.getElementById('search'); //se crea la constante inputSearch
 
@@ -110,8 +104,7 @@ sortOption.addEventListener('change', (event) => { //escucho evento const sortOp
  
 
 
-
-  // modal
+  // data para el modal
 
 const modal = document.getElementById('modal'); //se crea la constante modal
 
@@ -151,13 +144,13 @@ const atletheDetails = (arrays) => {
   `;
 };
 
-/* Para cerrar el modal */
+// Para cerrar el modal 
 const closeModal = document.getElementById('close');
 
 closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
 });
-=======
+
   //llenado de select id sport con la data de js
 const selectSport = document.getElementById("sport");
 const uniqueSport = allSport(infoAthletes) //cree una variable para darle el resultado del metodo y  le doy un paramatro al metodo y lo ejecuto 
@@ -206,3 +199,4 @@ sortTeam.addEventListener('change', (event) => { //escucho evento donde cambia l
  dataAthletes(dataOrdenada);
 });
 
+//console.log(dataAthletes, data);

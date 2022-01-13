@@ -64,3 +64,4 @@ export const allTeam = (data) => {
   });
   return new Set(newArrTeam);
 }
+
