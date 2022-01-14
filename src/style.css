@@ -97,16 +97,17 @@
 .firstParagraph {
   font-family: "Righteous";
   font-size: 2vw;
+  padding-top: 5%;
 }
 .firtImg {
   margin-right: -0.7%;
-  padding-top: 5%;
+  padding-top: 10%;
 }
 .athletesImg {
   width: 28vw;
 }
 .logoPosition {
-  padding-top: 26%;
+  padding-top: 31%;
   padding-left: 4%;
 }
 .logoImg {
@@ -122,10 +123,10 @@
 }
 
 .linePosition {
-  padding-bottom: 2%;
+  padding-bottom: 0.8%;
 }
 .lineStyle {
-  height: 0.8vh;
+  height: 0.5vh;
   background-color: black;
   width: 98vw;
   border: none;
@@ -145,13 +146,14 @@
 .iniciarFiltrado {
   display: flex;
   flex-direction: column;
-  padding-left: 1.8%;
+  padding-left: 7%;
   justify-content: left;
 }
 
 .invitationPosition {
   margin-left: -0.1%;
   padding-bottom: 1%;
+  padding-top: 2%;
 }
 
 .filtrarAhora {
@@ -162,17 +164,40 @@
 .inputSearch {
   margin-left: -0.1%;
   padding-bottom: 1%;
+  display: flex;
+  gap: 10px;
+}
+.searchStyle{
+   width: 20vw;
+  height: 3.5vh;
+  border-radius: 7px;
+  border-color: black;
+
+
 }
 
 #search {
   font-family: "Righteous";
   font-size: 1vw;
+  color: black;
+}
+::placeholder{
+   color: black;
+   padding-left: 5%;
 }
 /*filtros*/
 
 .sort {
   font-family: "Righteous";
   font-size: 1vw;
+  background-color: black; color:white;
+  padding: 2%;
+  border-radius: 7px;
+  width: 10vw;
+  height: 4vh;
+  text-align: center;
+  padding-top: 1.2%;
+
 }
 
 /*fin clase filtros*/
@@ -181,6 +206,7 @@
 
 .filterArea {
   display: flex;
+  padding-bottom: 140px;
 }
 
 .filterGroup {
@@ -192,33 +218,30 @@
 }
 
 .positionContainer {
-  height: 100vh;
-  width: 70%;
+  height: 12px;
+  width: 60%;
   padding: 1%;
   overflow: scroll;
   border: 5px solid #f7bc57;
   border-radius: 15px;
-  margin-left: 2%;
-  margin-top: 5%;
-
-  margin-bottom: 5%;
-  /* gap: 5%; */
+  margin-left: 7%;
+  margin-top: 1%;
+  margin-bottom: 0%;
 }
 
 .containerAthletes {
   width: cover;
-  height: 100vh;
+  height: 60vh;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-
   gap: 2%;
 }
 
 .card {
   background-color: #f7bc5763;
-  width: 16vw;
-  height: 30vh;
+  width: 14vw;
+  height: 27.4vh;
   /* border: 2px solid #F7BC57; */
   border-radius: 15px;
   text-align: center;
@@ -276,27 +299,34 @@
   text-align: center;
 }
 
-.footer {
-  background: #eb6062;
-  color: #ffffff;
 
-  font-family: "Righteous";
-  font-size: 1vw;
-}
 
 .footer {
   background-color: rgb(238, 66, 66);
   text-align: center;
-  color: rgb(223, 219, 219);
+  color: rgb(255, 255, 255);
   font-family: "Righteous";
   font-size: 1vw;
   display: flex;
-  padding-top: 30px;
+  padding-top: 1px;
   padding-right: 0px;
   padding-left: 15px;
+  
 }
+.footerP{
+   width: 100%;
+   display: flex;
+   padding-top: 1%;
+   /* gap: 1%; */
+   margin-right: -5%;
+   text-align: center;
+   margin-right: -5%;
+}
+.comite{
+padding-left: -5%;
 
-.antorchaImg {
+}
+.antorchaImg { 
   width: 3vw;
   margin-left: -1%;
 }
