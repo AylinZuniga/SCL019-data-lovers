@@ -298,6 +298,18 @@
   font-family: "Bebas Neue", cursive;
   text-align: center;
 }
+.clear{
+  font-family: "Righteous";
+  font-size: 1vw;
+  background-color: white; color:rgb(0, 0, 0);
+  padding: 2%;
+  border-radius: 7px;
+  width: 6vw;
+  height: 4vh;
+  text-align: center;
+  padding-top: 2%;
+  border-color: black;
+}
 
 
 
