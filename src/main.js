@@ -8,7 +8,7 @@ import { genderFiler,medalFilter, allSport, allTeam, sportFilter,teamFilter} fro
 
 
 
-const infoAthletes = data.athletes;
+var infoAthletes = data.athletes;
 const athletesProfil = document.getElementById('containerAthletes');
 
 
@@ -79,6 +79,7 @@ sortOption.addEventListener('change', (event) => { //escucho evento const sortOp
     
     const dataOrdenada =  genderFiler(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
     dataAthletes(dataOrdenada);
+    infoAthletes = dataOrdenada
   });
 
 
@@ -88,9 +89,10 @@ sortOption.addEventListener('change', (event) => { //escucho evento const sortOp
  const sortMedal = document.querySelector('#medals');// obtener el selector por genero
 
  sortMedal.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
-  
   const dataOrdenada =  medalFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
   dataAthletes(dataOrdenada);
+  infoAthletes = dataOrdenada
+  
 });
 
 
@@ -186,6 +188,7 @@ sortSport.addEventListener('change', (event) => { //escucho evento donde cambia 
  
  const dataOrdenada = sportFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
  dataAthletes(dataOrdenada);
+ infoAthletes = dataOrdenada
 });
 
 
@@ -197,6 +200,7 @@ sortTeam.addEventListener('change', (event) => { //escucho evento donde cambia l
  
  const dataOrdenada = teamFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
  dataAthletes(dataOrdenada);
+ infoAthletes = dataOrdenada
 });
 
 //position pixed header
@@ -211,3 +215,15 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+
+document.getElementById('clearBtn').addEventListener("click", function(){ 
+        
+  infoAthletes = data.athletes;
+  dataAthletes(infoAthletes );  
+  document.getElementById('sport').value = 'All' 
+  document.getElementById('medals').value = 'All'
+  document.getElementById('gender').value = 'All'
+  document.getElementById('team').value = 'All'   
+
+});
