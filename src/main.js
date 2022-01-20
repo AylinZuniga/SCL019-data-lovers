@@ -19,11 +19,11 @@ const dataAthletes = (newData) => {
         const card = document.createElement('div');
         card.classList.add('card'); //le agregue el stilo card es una tarjeta 
         card.innerHTML = `
-    <div>
-    <img src = ${arrays.gender === 'F'
+    <div >
+    <img class="imgCard" src = ${arrays.gender === 'F'
                 ? './imagenes/athletefemale.png'
                 : './imagenes/athletemale.png'}
-    width = 110 height = 110> 
+    > 
     </div>
 
     <div class="cardAthlete">

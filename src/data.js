@@ -1,6 +1,3 @@
-// funcion de filtrado 
-
-
 
 //Búsqueda por atletas
 export const searchInput = (infoAthletes, value) => {
@@ -43,11 +40,12 @@ export const allSport = (data) => {
   const newArrSport = data.map(newData => {
     return newData.sport
   });
-  return new Set(newArrSport);
+  return new Set([newArrSport]);
 }
 
 
 // no se repita el team
+
 
 export const allTeam = (data) => {
   data = data.sort((a, b) => ((a.team.toUpperCase() > b.team.toUpperCase()) ? 1 : -1))
