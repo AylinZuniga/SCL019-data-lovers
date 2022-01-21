@@ -55,11 +55,13 @@ export const allSport = (data) => {
     return newData.sport
   });
 
-  return new Set(newArrSport);
+  return new Set([newArrSport]);
+
 }
 
 
 // función para que no se repita el team
+
 
 
 export const allTeam = (data) => {

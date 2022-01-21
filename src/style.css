@@ -240,7 +240,6 @@
   background-color: #f7bc5763;
   width: 14vw;
   height: 27.4vh;
-  /* border: 2px solid #F7BC57; */
   border-radius: 15px;
   text-align: center;
   padding-top: 2%;
@@ -326,7 +325,6 @@
    width: 100%;
    display: flex;
    padding-top: 1%;
-   /* gap: 1%; */
    margin-right: -5%;
    text-align: center;
    margin-right: -5%;
@@ -373,4 +371,77 @@ padding-left: -5%;
   right: 550px;
   background-color: transparent;
   position: absolute;
+}
+.imgCard{
+  width: 98px;
+  height: 98px;
+}
+
+@media screen and (max-width: 802px) { 
+
+  .card {
+    padding-top: 2%;
+    height: 12vh;
+    font-size: 1vw;
+    gap: 1%;
+  }
+
+  .positionContainer {
+    height: 10%;
+    width: 60%;
+  }
+
+
+  .imgCard{
+    width: 50px;
+    height: 50px;
+  }
+  .team {
+    width: 15vw;
+    height: 5vh;
+    font-size: 20px;   
+}
+
+.sport{
+  width: 15vw;
+  height: 5vh;
+  font-size: 20px; 
+}
+
+.gender{
+  width: 15vw;
+  height: 5vh;
+  font-size: 20px; 
+}
+.medals{
+  width: 15vw;
+  height: 5vh;
+  font-size: 20px; 
+}
+.clear{
+  font-size: 1.5vw;
+  width: 7vw;
+  height: 3.5vh;
+}
+
+
+.filterArea {
+    display: flex;
+    padding-bottom: 30px;
+}
+.invitationPosition {
+ 
+  padding-top:10%;
+}
+
+.inputSearch {
+  
+  padding-bottom: 2%;
+  
+}
+.filtrarAhora {
+  font-family: "Righteous";
+  font-size: 1.5vw;
+}
+
 }
