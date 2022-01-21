@@ -5,17 +5,32 @@ export const searchInput = (infoAthletes, value) => {
   return buscador;
 };
 
-// // filtro por genero
-export const genderFiler = (data, valor) => {
+//orden por alfabeto
+
+export const orderAZ = (order) => {
+  const orderlyAZ = order.sort((a, b) => ((a.name.toUpperCase() > b.name.toUpperCase()) ? 1 : -1)); //ordene a partir de la data que tiene
+  return orderlyAZ;
+};
+
+export const orderZA = (order) => {
+  const orderlyZA = order.sort((a, b) => ((a.name.toUpperCase() < b.name.toUpperCase()) ? 1 : -1));
+  return orderlyZA;
+};
+
+
+//filtro por género
+export const genderFilter = (data, valor) => {
   const filterGenderArr = data.filter(items => (items.gender === valor || valor === 'All'));
   return filterGenderArr;
 };
 
-// // filtro por medalla
+//filtro por medalla
 export const medalFilter = (data, valor) => {
   const filterMedalArr = data.filter(items => (items.medal === valor || valor === 'All')); //propiedades del item 
   return filterMedalArr;
 };
+
+
 //filtro por deporte 
 export const sportFilter = (data, valor) => {
   const filterSportArr = data.filter(items => (items.sport === valor || valor === 'All')); //propiedades del item 
@@ -23,7 +38,7 @@ export const sportFilter = (data, valor) => {
 
 };
 
-//filtro por deporte 
+//filtro por team 
 export const teamFilter = (data, valor) => {
   const filterTeamArr = data.filter(items => (items.team === valor || valor === 'All')); //propiedades del item 
   return filterTeamArr ;
@@ -31,20 +46,22 @@ export const teamFilter = (data, valor) => {
 };
 
 
+// función para que no se repita el sport
 
-// no se repita el sport
-
-export const allSport = (data) => {
+export const allSport = (data) => { 
   data = data.sort((a, b) => ((a.sport.toUpperCase() > b.sport.toUpperCase()) ? 1 : -1))
 
   const newArrSport = data.map(newData => {
     return newData.sport
   });
+
   return new Set([newArrSport]);
+
 }
 
 
-// no se repita el team
+// función para que no se repita el team
+
 
 
 export const allTeam = (data) => {
@@ -56,3 +73,4 @@ export const allTeam = (data) => {
   return new Set(newArrTeam);
 }
 
+ 

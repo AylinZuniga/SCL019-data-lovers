@@ -1,3 +1,4 @@
+
 import { genderFiler, medalFilter } from '../src/data.js';
 
 
@@ -107,3 +108,4 @@ describe('prueba para la funcion de filtro por medalla', () => {
     expect(medalFilter(input, 'Gold')).toEqual(ouput2);
   });
 });
+
