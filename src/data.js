@@ -1,20 +1,30 @@
 
-// funcion de filtrado 
-
-
 //Búsqueda por atletas
 export const searchInput = (infoAthletes, value) => {
   const buscador = infoAthletes.filter(el => el.name.toLowerCase().includes(value.toLowerCase()));
   return buscador;
 };
 
-// // filtro por genero
-export const genderFiler = (data, valor) => {
+//orden por alfabeto
+
+export const orderAZ = (order) => {
+  const orderlyAZ = order.sort((a, b) => ((a.name.toUpperCase() > b.name.toUpperCase()) ? 1 : -1)); //ordene a partir de la data que tiene
+  return orderlyAZ;
+};
+
+export const orderZA = (order) => {
+  const orderlyZA = order.sort((a, b) => ((a.name.toUpperCase() < b.name.toUpperCase()) ? 1 : -1));
+  return orderlyZA;
+};
+
+
+//filtro por género
+export const genderFilter = (data, valor) => {
   const filterGenderArr = data.filter(items => (items.gender === valor || valor === 'All'));
   return filterGenderArr;
 };
 
-// // filtro por medalla
+//filtro por medalla
 export const medalFilter = (data, valor) => {
   const filterMedalArr = data.filter(items => (items.medal === valor || valor === 'All')); //propiedades del item 
   return filterMedalArr;
@@ -36,10 +46,7 @@ export const teamFilter = (data, valor) => {
 };
 
 
-
-// no se repita el sport
-
-let mySet = new Set()
+// función para que no se repita el sport
 
 export const allSport = (data) => { 
   data = data.sort((a, b) => ((a.sport.toUpperCase() > b.sport.toUpperCase()) ? 1 : -1))
@@ -52,7 +59,7 @@ export const allSport = (data) => {
 }
 
 
-// no se repita el team
+// función para que no se repita el team
 
 
 export const allTeam = (data) => {
