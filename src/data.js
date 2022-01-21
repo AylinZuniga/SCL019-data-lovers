@@ -24,11 +24,13 @@ export const genderFilter = (data, valor) => {
   return filterGenderArr;
 };
 
-// // filtro por medalla
+//filtro por medalla
 export const medalFilter = (data, valor) => {
   const filterMedalArr = data.filter(items => (items.medal === valor || valor === 'All')); //propiedades del item 
   return filterMedalArr;
 };
+
+
 //filtro por deporte 
 export const sportFilter = (data, valor) => {
   const filterSportArr = data.filter(items => (items.sport === valor || valor === 'All')); //propiedades del item 
@@ -44,20 +46,22 @@ export const teamFilter = (data, valor) => {
 };
 
 
+// función para que no se repita el sport
 
-// no se repita el sport
-
-export const allSport = (data) => {
+export const allSport = (data) => { 
   data = data.sort((a, b) => ((a.sport.toUpperCase() > b.sport.toUpperCase()) ? 1 : -1))
 
   const newArrSport = data.map(newData => {
     return newData.sport
   });
+
   return new Set([newArrSport]);
+
 }
 
 
-// no se repita el team
+// función para que no se repita el team
+
 
 
 export const allTeam = (data) => {
@@ -69,3 +73,4 @@ export const allTeam = (data) => {
   return new Set(newArrTeam);
 }
 
+ 
