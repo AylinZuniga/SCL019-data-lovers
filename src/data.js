@@ -34,7 +34,7 @@ export const medalFilter = (data, valor) => {
 //filtro por deporte 
 export const sportFilter = (data, valor) => {
   const filterSportArr = data.filter(items => (items.sport === valor || valor === 'All')); //propiedades del item 
-  return filterSportArr ;
+  return filterSportArr;
 
 };
 
@@ -55,7 +55,7 @@ export const allSport = (data) => {
     return newData.sport
   });
 
-  return new Set([newArrSport]);
+  return new Set(newArrSport);
 
 }
 

@@ -240,6 +240,7 @@
   background-color: #f7bc5763;
   width: 14vw;
   height: 27.4vh;
+  /* border: 2px solid #F7BC57; */
   border-radius: 15px;
   text-align: center;
   padding-top: 2%;
@@ -325,6 +326,7 @@
    width: 100%;
    display: flex;
    padding-top: 1%;
+   /* gap: 1%; */
    margin-right: -5%;
    text-align: center;
    margin-right: -5%;
