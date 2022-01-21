@@ -5,8 +5,21 @@ export const searchInput = (infoAthletes, value) => {
   return buscador;
 };
 
+//orden por alfabeto
+
+export const orderAZ = (order) => {
+    const orderlyAZ = order.sort((a, b) => ((a.name.toUpperCase() > b.name.toUpperCase()) ? 1 : -1)); //ordene a partir de la data que tiene
+    return orderlyAZ;
+  };
+
+export const orderZA = (order) => {
+    const orderlyZA = order.sort((a, b) => ((a.name.toUpperCase() < b.name.toUpperCase()) ? 1 : -1));
+    return orderlyZA;
+  };
+
+
 // // filtro por genero
-export const genderFiler = (data, valor) => {
+export const genderFilter = (data, valor) => {
   const filterGenderArr = data.filter(items => (items.gender === valor || valor === 'All'));
   return filterGenderArr;
 };
@@ -23,7 +36,7 @@ export const sportFilter = (data, valor) => {
 
 };
 
-//filtro por deporte 
+//filtro por team
 export const teamFilter = (data, valor) => {
   const filterTeamArr = data.filter(items => (items.team === valor || valor === 'All')); //propiedades del item 
   return filterTeamArr ;
