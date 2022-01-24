@@ -76,7 +76,7 @@ A medida que se iba diseñando la página web, se mostró a varios usuarios para
 
 Se realizaron los test a las funciones de data.js y obtuvimos los siguientes resultados:
 
-![Test-Unitarios](src/imagenes/testUnitarios.png)
+![Test-Unitarios](src/imagenes/testUnitarios1.jpg)
 
 
 
