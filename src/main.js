@@ -125,7 +125,7 @@ sortOption.addEventListener('change', (event) => { //escucho evento const sortOp
 
  //filtro por medalla
 
- const sortMedal = document.querySelector('#medals');// obtener el selector por genero
+ const sortMedal = document.querySelector('#medals');// obtener el selector por medalla
 
  sortMedal.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
   const dataOrdenada =  medalFilter(infoAthletes,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
