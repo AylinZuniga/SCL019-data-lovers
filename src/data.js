@@ -18,7 +18,7 @@ export const orderZA = (order) => {
   };
 
 
-// // filtro por genero
+//filtro por genero
 export const genderFilter = (data, valor) => {
   const filterGenderArr = data.filter(items => (items.gender === valor || valor === 'All'));
   return filterGenderArr;
